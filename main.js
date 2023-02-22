@@ -67,6 +67,10 @@ search.addEventListener("click", () => {
             image.src = "images/fog.png";
             break;
 
+          case "Drizzle":
+            image.src = "images/drizzle.jpeg";
+            break;
+
           default:
             image.src = "";
         }
@@ -98,6 +102,10 @@ search.addEventListener("click", () => {
 
           case "Fog":
             quote.innerHTML = "Today smoking is going to save lives.";
+            break;
+
+          case "Drizzle":
+            quote.innerHTML = "Time to wear your blue rain poncho.";
             break;
 
           default:
