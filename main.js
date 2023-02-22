@@ -32,6 +32,7 @@ search.addEventListener("click", () => {
         error404.classList.remove("fadeIn");
 
         const image = document.querySelector('.weather-box img');
+        const quote = document.querySelector('.weather-box .quote');
         const temperature = document.querySelector('.weather-box .temperature');
         const description = document.querySelector('.weather-box .description');
         const humidity = document.querySelector('.weather-details .humidity span');
@@ -39,27 +40,68 @@ search.addEventListener("click", () => {
 
         switch (json.weather[0].main) {
           case "Clear":
-            image.src = "images/joi.png";
+            image.src = "images/cliar.jpeg";
             break;
 
           case "Rain":
-            image.src = "images/sad.png";
+            image.src = "images/rain.jpg";
             break;
 
           case "Snow":
-            image.src = "images/disgust.png";
+            image.src = "images/snow.webp";
             break;
 
           case "Clouds":
-            image.src = "images/hot-fire.png";
+            image.src = "images/clouds.png";
             break;
 
           case "Haze":
-            image.src = "images/worry.png";
+            image.src = "images/fog.png";
+            break;
+
+          case "Mist":
+            image.src = "images/haze.png";
+            break;
+
+          case "Fog":
+            image.src = "images/fog.png";
             break;
 
           default:
             image.src = "";
+        }
+
+        switch (json.weather[0].main) {
+          case "Clear":
+            quote.innerHTML = "Florida Stanley Is Who You Want On Your Florida Team";
+            break;
+
+          case "Rain":
+            quote.innerHTML = "Rain, wether inside or outside.";
+            break;
+
+          case "Snow":
+            quote.innerHTML = "Be aware of snowman.";
+            break;
+
+          case "Clouds":
+            quote.innerHTML = "It would rain if they were altocumulus, not cirrostratus.";
+            break;
+
+          case "Haze":
+            quote.innerHTML = "The fire is shooting at us!";
+            break;
+
+          case "Mist":
+            quote.innerHTML = "Not this kind of mist.";
+            break;
+
+          case "Fog":
+            quote.innerHTML = "Today smoking is going to save lives.";
+            break;
+
+          default:
+            quote.innerHTML = "";
         }
 
         temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;

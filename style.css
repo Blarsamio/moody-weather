@@ -77,8 +77,9 @@ body {
 }
 
 .weather-box img {
-  width: 60%;
+  width: 90%;
   margin-top: 30px;
+  object-fit: cover;
 }
 
 .weather-box .temperature {
@@ -128,18 +129,18 @@ body {
 }
 
 .not-found {
-  width: 50%;
+  width: 90%;
   text-align: center;
   margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
   scale: 0;
   opacity: 0;
+  margin-left: auto;
+  margin-right: auto;
   display: none;
 }
 
 .not-found img {
-  width: 70%;
+  width: 90%;
 }
 
 .not-found p {
